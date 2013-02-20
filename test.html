@@ -1,0 +1,146 @@
+<html lang="en">
+<head>
+<style>
+
+/* ##########################################################################
+##################################### CSS ##################################
+###########################################################################*/
+#header {
+  color:#eee;
+  background: #2b2726;
+  text-align: center;
+  padding-bottom: 1em;
+}
+
+.logo {
+  margin: 1.25em 0;
+  width: 200px;
+}
+
+#demo-nav {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+  font-family: 'helvetica', 'sans-serif';
+}
+	
+#demo-nav li {
+  display: inline;
+}
+	
+li.current a {color: #7b7776;}
+
+#demo-nav a {
+  color:#fff;
+  padding: 5px;
+  text-decoration: none;
+  line-height: 2.5;
+  }
+	
+#demo-nav a:hover {text-decoration: underline;}
+
+
+
+
+#toggle, .toggle { display: none; }
+#demo-nav > li { list-style: none; float:left;  }
+.clearfix:before, 
+.clearfix:after { display: table; content: ""; }
+.clearfix:after { clear: both; }
+/* ##########################################################################
+############################## MEDIA QUERIES ################################
+###########################################################################*/
+
+
+@media screen and (max-width: 480px) {
+  #header {padding-bottom: 0;}
+  #demo-nav {
+  		float: right; 
+  		width: 100%
+  }
+  #demo-nav a {
+	  	width:100%;
+	    padding: 5%;
+	    background: #2b2726;
+	    display: block;
+	    float: left;
+		clear:both;
+	}
+	#demo-nav { 
+        display: none; 
+        opacity: 0; 
+        width: 100%; 
+        position: relative; 
+        top: 0; 
+    }
+    #demo-nav > li { 
+        display: block; 
+        width: 100%; 
+        margin: 0;
+     }
+
+    #menu > li > a { 
+        display: block; 
+        width: 100%; 
+        text-decoration: none; 
+    }
+	.toggle { 
+	    display: block; 
+	    position: relative; 
+	    cursor: pointer; 
+	}
+    #toggle:checked ~ #demo-nav { 
+    	display: block; 
+    	opacity: 1;
+    }
+    .toggle:after {
+        content: 'Menu';
+        display: block;
+        width: 100%;
+        margin:0;
+        padding:0;
+        background:  #000;
+        -webkit-border-radius: 2px;
+        border-radius: 2px;
+        text-align: center;
+        font-size: 12px;
+        color: #FFFFFF;
+        line-height: 45px;
+    }
+    .toggle:hover:after{
+        background: #549901;
+        display:block;
+    }
+    #toggle:checked + .toggle:after{
+        content: 'Close';
+    }
+    .toggle:after { 
+        text-align: center; 
+        width: 100%; 
+        float: none; 
+    }
+}
+
+
+
+</style>
+</head>
+<body id="home">
+
+<input type="checkbox" id="toggle" />
+<label for="toggle" class="toggle" onclick></label>
+<div id="header">
+  <div class="container">
+    <ul id="demo-nav">
+      <li><a href="">Back to Post</a></li>
+      <li><a href="top-nav.html">Top-Nav</a></li>
+      <li><a href="priority.html">Priority</a></li>
+      <li><a href="select.html">Select Menu</a></li>
+      <li><a href="select-js.html">Select Menu JS</a></li>
+    </ul>
+  </div>
+</div>
+
+</body>
+</html>
